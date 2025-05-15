@@ -26,7 +26,7 @@ func NewClient(cfg *config.DBConfig) (*ent.Client, error) {
 		return nil, err
 	}
 
-	// Run the auto migration tool
+	// Run the auto-migration tool
 	if err := client.Schema.Create(context.Background()); err != nil {
 		log.Fatalf("failed creating schema resources: %v", err)
 		return nil, err
