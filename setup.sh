@@ -1,9 +1,4 @@
-# code-go
-learning go
-
-
-#### STEP 1
-go mod init github.com/yourusername/go-rest-api
+go mod init github.com/githubdmn/codego
 
 mkdir -p cmd/api
 mkdir -p internal/api/handler
@@ -19,6 +14,7 @@ mkdir docs
 go get github.com/gin-gonic/gin
 
 # Ent ORM
+#go get entgo.io/ent/dialect@latest
 go get -d entgo.io/ent/cmd/ent
 go install entgo.io/ent/cmd/ent@latest
 
@@ -32,3 +28,5 @@ go get github.com/spf13/viper
 
 # Logger
 go get go.uber.org/zap
+
+go run entgo.io/ent/cmd/ent init User
