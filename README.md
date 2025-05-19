@@ -1,34 +1,24 @@
-# code-go
-learning go
 
 
-#### STEP 1
-go mod init github.com/yourusername/go-rest-api
+### Initial example instructions
 
-mkdir -p cmd/api
-mkdir -p internal/api/handler
-mkdir -p internal/api/middleware
-mkdir -p internal/api/route
-mkdir -p internal/config
-mkdir -p internal/model
-mkdir -p internal/service
-mkdir -p pkg/database
-mkdir docs
+go build -o hello-app  # Compiles the entire module
+./hello-app           # Output: Hello, Alice!
 
-# Gin framework
-go get github.com/gin-gonic/gin
+# Or run directly:
+go run main.go
 
-# Ent ORM
-go get -d entgo.io/ent/cmd/ent
-go install entgo.io/ent/cmd/ent@latest
+go get github.com/some/package  # Adds dependency to go.mod
+go mod tidy                     # Clean up unused dependencies
 
-# Swagger
-go get github.com/swaggo/swag/cmd/swag
-go get github.com/swaggo/gin-swagger
-go get github.com/swaggo/files
+go test ./...
 
-# Config management
-go get github.com/spf13/viper
 
-# Logger
-go get go.uber.org/zap
+hello/
+├── go.mod
+├── main.go
+└── greeting/
+    ├── greeting.go
+        └── greeting_test.go
+
+
