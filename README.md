@@ -2,8 +2,10 @@
 
 ### Initial example instructions
 
-go build -o hello-app  # Compiles the entire module
-./hello-app           # Output: Hello, Alice!
+go mod init example.com/hello
+
+go build -o out/hello-app  # Compiles the entire module
+./out/hello-app           # Output: Hello, Alice!
 
 # Or run directly:
 go run main.go
@@ -14,11 +16,11 @@ go mod tidy                     # Clean up unused dependencies
 go test ./...
 
 
-hello/
+project/
 ├── go.mod
 ├── main.go
 └── greeting/
     ├── greeting.go
-        └── greeting_test.go
+    └── greeting_test.go
 
 
