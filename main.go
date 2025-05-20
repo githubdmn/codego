@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-    message := greeting.Hello("Alice")
-    fmt.Println(message)
+		fmt.Println();
+    greeting.Run();
 }
